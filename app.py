@@ -5,7 +5,7 @@ import random
 # Set page config
 st.set_page_config(
     page_title="BMI Calculator Python",
-    page_icon="../static/favicon.ico",
+    page_icon="./static/favicon.ico",
     layout="centered"
 )
 
@@ -31,7 +31,7 @@ def get_bmi_category(bmi):
 
 # Custom CSS
 def load_css():
-    css_path = Path("../static/style.css")
+    css_path = Path("./static/style.css")
     if css_path.exists():
         with open(css_path) as f:
             st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
@@ -47,7 +47,7 @@ def main():
     with col3:
         # Wrap the logo image with a div that will be styled in CSS for centering
         st.markdown('<div class="logo-container">', unsafe_allow_html=True)
-        st.image("../static/logo.png", width=100)
+        st.image("./static/logo.png", width=100)
         st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown("""
